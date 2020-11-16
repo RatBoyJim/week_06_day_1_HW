@@ -70,26 +70,50 @@
 // only available to the declareAllSuspects method.
 
 
-const scenario = {
-    murderer: 'Miss Scarlet',
-    room: 'Kitchen',
-    weapon: 'Candle Stick'
-  };
+// const scenario = {
+//     murderer: 'Miss Scarlet',
+//     room: 'Kitchen',
+//     weapon: 'Candle Stick'
+//   };
   
-  const changeWeapon = function(newWeapon) {
-    scenario.weapon = newWeapon;
-  }
+//   const changeWeapon = function(newWeapon) {
+//     scenario.weapon = newWeapon;
+//   }
   
-  const declareWeapon = function() {
-    return `The weapon is the ${scenario.weapon}.`;
-  }
+//   const declareWeapon = function() {
+//     return `The weapon is the ${scenario.weapon}.`;
+//   }
   
-  changeWeapon('Revolver');
-  const verdict = declareWeapon();
-  console.log(verdict);
+//   changeWeapon('Revolver');
+//   const verdict = declareWeapon();
+//   console.log(verdict);
 
   // The console will output "The weapon is the revolver" as
   // you can change the values in a const object.
 
-  
+
+
+  let murderer = 'Colonel Mustard';
+
+const changeMurderer = function() {
+  murderer = 'Mr. Green';
+
+  const plotTwist = function() {
+    murderer = 'Mrs. White';
+  }
+
+  plotTwist();
+}
+
+const declareMurderer = function () {
+  return `The murderer is ${murderer}.`;
+}
+
+changeMurderer();
+const verdict = declareMurderer();
+console.log(verdict);
+
+// The console will output "The murderer is Mrs.White" as
+// the declare murderer function changes the murderer to Mrs.White
+// as per the plotTwist function within the changeMurderer function.
 
