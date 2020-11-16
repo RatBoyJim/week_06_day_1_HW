@@ -117,30 +117,69 @@
 // the declare murderer function changes the murderer to Mrs.White
 // as per the plotTwist function within the changeMurderer function.
 
-let murderer = 'Professor Plum';
+// let murderer = 'Professor Plum';
 
-const changeMurderer = function() {
-  murderer = 'Mr. Green';
+// const changeMurderer = function() {
+//   murderer = 'Mr. Green';
 
-  const plotTwist = function() {
-    let murderer = 'Colonel Mustard';
+//   const plotTwist = function() {
+//     let murderer = 'Colonel Mustard';
 
-    const unexpectedOutcome = function() {
-      murderer = 'Miss Scarlet';
-    }
+//     const unexpectedOutcome = function() {
+//       murderer = 'Miss Scarlet';
+//     }
 
-    unexpectedOutcome();
-  }
+//     unexpectedOutcome();
+//   }
 
-  plotTwist();
-}
+//   plotTwist();
+// }
 
-const declareMurderer = function() {
-  return `The murderer is ${murderer}.`;
-}
+// const declareMurderer = function() {
+//   return `The murderer is ${murderer}.`;
+// }
 
-changeMurderer();
-const verdict = declareMurderer();
-console.log(verdict);
+// changeMurderer();
+// const verdict = declareMurderer();
+// console.log(verdict);
 
 // No idea. Thought it was Colonel Mustard
+
+
+const scenario = {
+    murderer: 'Mrs. Peacock',
+    room: 'Conservatory',
+    weapon: 'Lead Pipe'
+  };
+  
+  const changeScenario = function() {
+    scenario.murderer = 'Mrs. Peacock';
+    scenario.room = 'Dining Room';
+  
+    const plotTwist = function(room) {
+      if (scenario.room === room) {
+        scenario.murderer = 'Colonel Mustard';
+      }
+  
+      const unexpectedOutcome = function(murderer) {
+        if (scenario.murderer === murderer) {
+          scenario.weapon = 'Candle Stick';
+        }
+      }
+  
+      unexpectedOutcome('Colonel Mustard');
+    }
+  
+    plotTwist('Dining Room');
+  }
+  
+  const declareWeapon = function() {
+    return `The weapon is ${scenario.weapon}.`
+  }
+  
+  changeScenario();
+  const verdict = declareWeapon();
+  console.log(verdict);
+
+  // The console will output "The Weapon is Candle Stick" as
+  // the room is the dining room and the murderer is colonel mustard.
