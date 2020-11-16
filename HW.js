@@ -51,21 +51,45 @@
 // The second verdict will show "The murderer is Professor Plum"
 // as this is the only murderer variable accessible to secondVerdict.
 
-let suspectOne = 'Miss Scarlet';
-let suspectTwo = 'Professor Plum';
-let suspectThree = 'Mrs. Peacock';
+// let suspectOne = 'Miss Scarlet';
+// let suspectTwo = 'Professor Plum';
+// let suspectThree = 'Mrs. Peacock';
 
-const declareAllSuspects = function() {
-  let suspectThree = 'Colonel Mustard';
-  return `The suspects are ${suspectOne}, ${suspectTwo}, ${suspectThree}.`;
-}
+// const declareAllSuspects = function() {
+//   let suspectThree = 'Colonel Mustard';
+//   return `The suspects are ${suspectOne}, ${suspectTwo}, ${suspectThree}.`;
+// }
 
-const suspects = declareAllSuspects();
-console.log(suspects);
-console.log(`Suspect three is ${suspectThree}.`);
+// const suspects = declareAllSuspects();
+// console.log(suspects);
+// console.log(`Suspect three is ${suspectThree}.`);
 
 // The console will show "Miss Scarlet, Proffessor Plum, Colonel Mustard
 // as Mustard is the third suspect available to the declareAllSuspects method.
 // The console will then state "Suspect three is Mrs.Peacock" as Mustard is 
 // only available to the declareAllSuspects method.
+
+
+const scenario = {
+    murderer: 'Miss Scarlet',
+    room: 'Kitchen',
+    weapon: 'Candle Stick'
+  };
+  
+  const changeWeapon = function(newWeapon) {
+    scenario.weapon = newWeapon;
+  }
+  
+  const declareWeapon = function() {
+    return `The weapon is the ${scenario.weapon}.`;
+  }
+  
+  changeWeapon('Revolver');
+  const verdict = declareWeapon();
+  console.log(verdict);
+
+  // The console will output "The weapon is the revolver" as
+  // you can change the values in a const object.
+
+  
 
