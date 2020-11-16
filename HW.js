@@ -93,19 +93,49 @@
 
 
 
-  let murderer = 'Colonel Mustard';
+//   let murderer = 'Colonel Mustard';
+
+// const changeMurderer = function() {
+//   murderer = 'Mr. Green';
+
+//   const plotTwist = function() {
+//     murderer = 'Mrs. White';
+//   }
+
+//   plotTwist();
+// }
+
+// const declareMurderer = function () {
+//   return `The murderer is ${murderer}.`;
+// }
+
+// changeMurderer();
+// const verdict = declareMurderer();
+// console.log(verdict);
+
+// The console will output "The murderer is Mrs.White" as
+// the declare murderer function changes the murderer to Mrs.White
+// as per the plotTwist function within the changeMurderer function.
+
+let murderer = 'Professor Plum';
 
 const changeMurderer = function() {
   murderer = 'Mr. Green';
 
   const plotTwist = function() {
-    murderer = 'Mrs. White';
+    let murderer = 'Colonel Mustard';
+
+    const unexpectedOutcome = function() {
+      murderer = 'Miss Scarlet';
+    }
+
+    unexpectedOutcome();
   }
 
   plotTwist();
 }
 
-const declareMurderer = function () {
+const declareMurderer = function() {
   return `The murderer is ${murderer}.`;
 }
 
@@ -113,7 +143,4 @@ changeMurderer();
 const verdict = declareMurderer();
 console.log(verdict);
 
-// The console will output "The murderer is Mrs.White" as
-// the declare murderer function changes the murderer to Mrs.White
-// as per the plotTwist function within the changeMurderer function.
-
+// No idea. Thought it was Colonel Mustard
